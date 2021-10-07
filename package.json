@@ -10,7 +10,7 @@
   ],
   "author": "Maksym Shamko",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "push": "git push origin master",
