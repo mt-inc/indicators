@@ -1,5 +1,5 @@
 import { SMA } from './sma';
-import settings from '../settings.json';
+import { saveHistory } from '@mt-inc/utils';
 
 export class EMA {
   private smooth: number;
@@ -27,7 +27,7 @@ export class EMA {
     }
     this.prev = this.ema;
     this.ema = (value - this.ema) * this.smooth + this.ema;
-    if (this.hist.length >= settings.saveHistory) {
+    if (this.hist.length >= saveHistory) {
       this.hist.shift();
     }
     this.hist.push(this.ema);

@@ -6,9 +6,10 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist/esm",
-    "declaration": true
+    "declaration": true,
+    "moduleResolution": "node"
   },
   "files": ["./index.ts"],
-  "include": ["./src"],
+  "include": ["./src", "index.ts"],
   "exclude": ["node_modules", ".yarn", "dist"]
 }

@@ -1,7 +1,7 @@
 {
-  "name": "@mt-inc/utils",
+  "name": "@mt-inc/indicators",
   "version": "1.0.0",
-  "description": "Utils for MT Inc. Project",
+  "description": "Indicators for MT Inc. Project",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "type": "module",
@@ -12,11 +12,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "yarn tsc",
     "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "push": "git push origin master",
-    "pull": "git pull origin master",
-    "commit": "git add . && git commit -m 'working'"
+    "push": "rm -rf ./dist && yarn tsc && git add . && git commit -m 'working' && git push origin master",
+    "pull": "git pull origin master"
   },
   "devDependencies": {
     "@types/node": "^16.10.3",
@@ -24,5 +22,8 @@
     "ts-node": "^10.2.1",
     "tsc": "^2.0.3",
     "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@mt-inc/utils": "git+ssh://git@github.com:mt-inc/utils.git"
   }
 }

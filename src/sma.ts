@@ -1,4 +1,4 @@
-import settings from '../settings.json';
+import { saveHistory } from '@mt-inc/utils';
 
 export class SMA {
   private arr: number[];
@@ -26,7 +26,7 @@ export class SMA {
       this.sum += value;
       this.prev = this.sma;
       this.sma = this.sum / this.period;
-      if (this.hist.length >= settings.saveHistory) {
+      if (this.hist.length >= saveHistory) {
         this.hist.shift();
       }
       this.hist.push(this.sma);

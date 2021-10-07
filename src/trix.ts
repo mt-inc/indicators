@@ -1,6 +1,6 @@
 import { ROC } from './roc';
 import { EMA } from './ema';
-import settings from '../settings.json';
+import { saveHistory } from '@mt-inc/utils';
 
 export class TRIX {
   private trix?: number;
@@ -29,7 +29,7 @@ export class TRIX {
     if (result) {
       this.prev = this.trix;
       this.trix = result;
-      if (this.hist.length >= settings.saveHistory) {
+      if (this.hist.length >= saveHistory) {
         this.hist.shift();
       }
       this.hist.push(this.trix);
