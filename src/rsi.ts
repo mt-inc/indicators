@@ -1,5 +1,5 @@
 import { AvgChangeProvider } from './helper/gain';
-import { saveHistory } from '@mt-inc/utils';
+import { constants } from '@mt-inc/utils';
 
 export class RSI {
   private change: AvgChangeProvider;
@@ -22,7 +22,7 @@ export class RSI {
 
     const RS = upAvg / -downAvg;
     this.rsi = 100 - 100 / (1 + RS);
-    if (this.hist.length >= saveHistory) {
+    if (this.hist.length >= constants.saveHistory) {
       this.hist.shift();
     }
     this.hist.push(this.rsi);
