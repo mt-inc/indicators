@@ -1,6 +1,6 @@
 {
   "name": "@mt-inc/indicators",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Indicators for MT Inc. Project",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -10,7 +10,6 @@
   ],
   "author": "Maksym Shamko",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "push": "git push origin master",
@@ -27,6 +26,6 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@mt-inc/utils": "^1.0.1"
+    "@mt-inc/utils": "^1.0.2"
   }
 }
