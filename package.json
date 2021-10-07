@@ -16,7 +16,8 @@
     "push": "git push origin master",
     "pull": "git pull origin master",
     "commit": "git add . && git commit -m 'working'",
-    "prepublish": "yarn tsc"
+    "prepublish": "yarn tsc",
+    "pub": "yarn npm publish --access public"
   },
   "devDependencies": {
     "@types/node": "^16.10.3",
